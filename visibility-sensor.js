@@ -277,7 +277,7 @@ module.exports = createReactClass({
     }
 
     var visibilityRect = {
-      top: rect.top >= containmentRect.top,
+      top: rect.top >= containmentRect.top && rect.top < containmentRect.bottom,
       left: rect.left >= containmentRect.left,
       bottom: rect.bottom <= containmentRect.bottom,
       right: rect.right <= containmentRect.right
